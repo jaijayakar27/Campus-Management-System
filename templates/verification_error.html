@@ -1,0 +1,52 @@
+<!-- templates/verification_error.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verification Error - Campus Entry Management System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <style>
+      .error-container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .error-message {
+        color: #dc3545;
+        margin: 20px 0;
+        font-size: 18px;
+        padding: 15px;
+        background-color: #f8d7da;
+        border-radius: 4px;
+      }
+      .return-link {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #6c757d;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+      .return-link:hover {
+        background-color: #545b62;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <h2>Verification Error</h2>
+      <div class="error-message">{{ message }}</div>
+      <a href="{{ url_for('index') }}" class="return-link"
+        >Return to Dashboard</a
+      >
+    </div>
+  </body>
+</html>

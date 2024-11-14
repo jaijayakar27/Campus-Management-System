@@ -1,0 +1,64 @@
+<!-- templates/verification_result.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verification Success - Campus Entry Management System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <style>
+      .success-container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .success-message {
+        color: #28a745;
+        margin: 20px 0;
+        font-size: 18px;
+        padding: 15px;
+        background-color: #d4edda;
+        border-radius: 4px;
+      }
+      .temp-id {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 4px;
+        margin: 20px 0;
+        font-family: monospace;
+        font-size: 16px;
+        border: 1px solid #dee2e6;
+      }
+      .return-link {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+      .return-link:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="success-container">
+      <h2>Verification Complete</h2>
+      <div class="success-message">{{ message }}</div>
+      {% if temp_id %}
+      <div class="temp-id">Temporary ID assigned: {{ temp_id }}</div>
+      {% endif %}
+      <a href="{{ url_for('index') }}" class="return-link"
+        >Return to Dashboard</a
+      >
+    </div>
+  </body>
+</html>

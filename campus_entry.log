@@ -1,0 +1,15 @@
+2024-11-11 23:22:59,504 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.166.97:5000
+2024-11-11 23:22:59,504 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-11 23:22:59,506 - INFO -  * Restarting with stat
+2024-11-11 23:23:01,787 - WARNING -  * Debugger is active!
+2024-11-11 23:23:01,796 - INFO -  * Debugger PIN: 627-382-113
+2024-11-11 23:23:03,351 - INFO - 127.0.0.1 - - [11/Nov/2024 23:23:03] "GET / HTTP/1.1" 200 -
+2024-11-11 23:23:03,770 - INFO - 127.0.0.1 - - [11/Nov/2024 23:23:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-11 23:23:04,130 - INFO - 127.0.0.1 - - [11/Nov/2024 23:23:04] "GET /video_feed HTTP/1.1" 200 -
+2024-11-11 23:23:09,125 - INFO - 127.0.0.1 - - [11/Nov/2024 23:23:09] "POST /process_entry HTTP/1.1" 200 -
+2024-11-11 23:23:15,298 - INFO - Security notification email sent for attempt ID: 1
+2024-11-11 23:23:31,087 - INFO - 127.0.0.1 - - [11/Nov/2024 23:23:31] "GET /security/verify/1/deny HTTP/1.1" 200 -
+2024-11-11 23:23:31,324 - INFO - 127.0.0.1 - - [11/Nov/2024 23:23:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -

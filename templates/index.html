@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Campus Entry Management System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Campus Entry Management System</h1>
+
+      <nav class="menu-tabs">
+        <a href="{{ url_for('index') }}" class="active">Dashboard</a>
+        <a href="{{ url_for('add_authorized') }}">Add Authorized Person</a>
+      </nav>
+
+      <div class="main-content">
+        <div class="video-container">
+          <img src="{{ url_for('video_feed') }}" alt="Video feed" />
+        </div>
+
+        <div class="controls">
+          <button class="btn btn-primary" onclick="processEntry()">
+            Record Entry
+          </button>
+          <button class="btn btn-secondary" onclick="processExit()">
+            Record Exit
+          </button>
+        </div>
+
+        <div class="download-section">
+          <h2>Download Data</h2>
+          <a
+            href="{{ url_for('download_data', table_name='authorized') }}"
+            class="btn btn-info"
+          >
+            Download Authorized List
+          </a>
+          <a
+            href="{{ url_for('download_data', table_name='captured') }}"
+            class="btn btn-info"
+          >
+            Download Entry/Exit Log
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function processEntry() {
+        fetch("/process_entry", { method: "POST" })
+          .then((response) => response.json())
+          .then((data) => alert(data.message));
+      }
+
+      function processExit() {
+        fetch("/process_exit", { method: "POST" })
+          .then((response) => response.json())
+          .then((data) => alert(data.message));
+      }
+    </script>
+  </body>
+</html>
